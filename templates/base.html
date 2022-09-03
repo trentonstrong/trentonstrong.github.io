@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ "/css/style.css" }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" }}" />
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      <li><a href="/about">About</a></li>
+    </ul>
+    <hr/>
+    </nav>
+
+    <main>
+    {%- block content %}
+    {%- endblock content %}
+</main>
+    <footer>
+        <hr/>
+        &copy;
+        <a href="https://trentonstrong.com">Trenton Strong</a> 2021 -- {{ now() | date(format="%Y") }}
+        | 
+        <a href="https://github.com/trentonstrong">Github</a> 
+        | 
+        <a href="https://linkedin.com/in/trentonstrong">LinkedIn</a>
+
+    </footer>
+      
+</body>
+</html>
